@@ -10,19 +10,19 @@ const headerOpts = {
 </script>
 <VizHeader {...headerOpts} />
 <div class='gauges'>
-	<Gauge value='33.23' title='Baja California Norte' />
-	<Gauge value='33.23' title='Baja California Sur' />
-	<Gauge value='33.23' title='Chihuahua' />
-	<Gauge value='33.23' title='Coahuila' />
-	<Gauge value='33.23' title='Nuevo León' />
-	<Gauge value='33.23' title='Sonora' />
-	<Gauge value='33.23' title='Tamaulipas' />
+	<Gauge value='59.86' title='Baja California Norte' />
+	<Gauge value='1.05' title='Baja California Sur' />
+	<Gauge value='16.56' title='Chihuahua' />
+	<Gauge value='0' title='Coahuila' />
+	<Gauge value='0' title='Nuevo León' />
+	<Gauge value='5.19' title='Sonora' />
+	<Gauge value='0' title='Tamaulipas' />
 </div>
 <style>
 	.gauges{
 		display: flex;
 		flex-wrap: wrap;
-		max-width: 700px;
+		max-width: 650px;
 		justify-content: space-around;
 	}
 </style>

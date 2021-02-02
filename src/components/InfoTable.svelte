@@ -13,13 +13,13 @@
 			{label:'Porcentaje Comprobado',tooltip:'some text yow'},
 		],
 		rows: [
-			['bcn','Baja California Norte',true,false,.8],
-			['bcs','Baja California Sur',true,false,.8],
-			['chi','Chihuahua',true,false,.8],
-			['coah','Coahuila',true,false,.7],
-			['nl','Nuevo León',true,false,.34],
-			['son','Sonora',true,false,0],
-			['tam','Tamaulipas',true,false,.8],
+			['bcn','Baja California Norte',false,false,.59],
+			['bcs','Baja California Sur',false,false,.01],
+			['chi','Chihuahua',true,false,.16],
+			['coah','Coahuila',true,false,0],
+			['nl','Nuevo León',true,false,0],
+			['son','Sonora',true,false,.05],
+			['tam','Tamaulipas',true,false,0],
 		]
 	}
 
@@ -46,7 +46,12 @@
 				{:else if typeof(cell) === 'boolean'}
 					<td><span class='icon {cell}'></span></td>
 				{:else if typeof(cell) === 'number'}
-					<td><span class='percent-bar' ><span style='width: {cell * 100}%'></span></span></td>
+					<td>
+						<span class='percent-bar' >
+							<span class='bar' style='width: {cell * 100}%'></span>
+							<span class='label' >{cell*100}%</span>
+						</span>
+					</td>
 				{/if}
 			{/each}
 		</tr>
@@ -113,8 +118,28 @@
 		background-color: #343434;
 		display: block;
 		height:6px;
+		position: relative;
 	}
-	.percent-bar span{		
+	.percent-bar .label{
+		position: absolute;
+		top:-13px;
+		display: block;
+		background-color:white;
+		color:black;
+		border-radius:50%;
+		width:30px;
+		line-height: 30px;
+		font-size:12px;
+		text-align: center;
+		margin-left:-15px;
+		left:50%;
+		display: none;
+
+	}
+	td:hover .label{
+		display: block;
+	}
+	.percent-bar .bar{		
 		background-color: #FFF200;
 		display: block;
 		height:6px;
