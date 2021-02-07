@@ -1,6 +1,7 @@
 <script>
 	import InfoTable from './components/InfoTable.svelte';
 	import RadarGrid from './components/RadarGrid.svelte';
+	import BarGraph from './components/BarGraph.svelte';
 	import queryString from 'query-string';
 
 	const urlParams = queryString.parse(location.search);
@@ -13,6 +14,8 @@
 		<InfoTable />
 	{:else if table === '2'}
 		<RadarGrid />
+	{:else if table === '3'}
+		<BarGraph />
 	{/if}
 </main>
 
