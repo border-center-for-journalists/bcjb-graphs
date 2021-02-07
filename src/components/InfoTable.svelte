@@ -1,33 +1,12 @@
 <script>
 	import VizHeader from '../components/VizHeader.svelte';
-	const header = {
-		title : 'Transparencia Activa de Gasto COVID',
-		description : 'Se indica que estados no cuentan con información del gasto COVID en sus sitios oficiales.'
-	};
-	const table = {
-		header: [
-			{label:''},
-			{label:'Estado'},
-			{label:'Micrositio',tooltip:'some text yow'},
-			{label:'Commprobantes',tooltip:'some text yow'},
-			{label:'Porcentaje Comprobado',tooltip:'some text yow'},
-		],
-		rows: [
-			['bcn','Baja California Norte',false,false,.59],
-			['bcs','Baja California Sur',false,false,.01],
-			['chi','Chihuahua',true,false,.16],
-			['coah','Coahuila',true,false,0],
-			['nl','Nuevo León',true,false,0],
-			['son','Sonora',true,false,.05],
-			['tam','Tamaulipas',true,false,0],
-		]
-	}
-
+	export let data;
+	export let header;
 </script>
 <VizHeader {...header} />
 <table>
 	<tr>
-		{#each table.header as header}
+		{#each data.header as header}
 			<th>
 				{header.label}
 				{#if header.tooltip}
@@ -36,7 +15,7 @@
 			</th>
 		{/each}
 	</tr>
-	{#each table.rows as row}
+	{#each data.rows as row}
 		<tr>
 			{#each row as cell,i}
 				{#if i === 0}

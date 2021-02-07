@@ -2,8 +2,8 @@
 	import VizHeader from '../components/VizHeader.svelte';
 	import Bar from "svelte-chartjs/src/Bar.svelte"
 	const headerOpts = {
-		title : 'Porcentage de comprobación',
-		description : 'Se indican el porcentaje de gastos comprobados mediante facturas en solicitudes de información.'
+		title : 'Gastos reportados por estados',
+		description : 'Se indican los gastos reportados en los micrositios, por solicitud de información y comprobables por facturas.'
 	};
 
 	let data = {
