@@ -10,7 +10,7 @@
 			<th>
 				{header.label}
 				{#if header.tooltip}
-					<span class='tooltip'></span>
+					<span class='tooltip'><span class='content'>{header.tooltip}</span></span>
 				{/if}
 			</th>
 		{/each}
@@ -36,6 +36,9 @@
 		</tr>
 	{/each}
 </table>
+{#if data.notes}
+<p class='notes'>{@html data.notes}</p>
+{/if}
 <style>
 	table{
 		border-collapse: collapse;
@@ -91,6 +94,35 @@
 		float:right;
 		position: relative;
 		margin:1px 0 0 7px;
+		font-size:15px;
+	}
+	.tooltip .content{
+		display: block;
+		position: absolute;
+		top: -6px;
+		transform: translateY(-110%) translateX(-50%);
+		background-color: black;
+		padding: 13px;
+		border-radius: 5px;
+		min-width: 250px;
+		margin-left:7px;
+		display: none;
+	}
+	.tooltip:hover .content{
+		display: block;
+	}
+	.tooltip .content:after{
+		content: '';
+		display: block;
+		width: 0; 
+		height: 0; 
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		border-top: 10px solid #000;
+		position: absolute;
+		bottom:-10px;
+		left: 50%;
+		margin-left:-10px;
 	}
 	.percent-bar{
 		width: 100%;		
@@ -122,6 +154,12 @@
 		background-color: #FFF200;
 		display: block;
 		height:6px;
+	}
+
+	.notes{
+		max-width: 716px;
+		text-align: left;
+		font-size:14px;
 	}
 	.bcn{background-image:url(/img/bcn-shld.png);}
 	.bcs{background-image:url(/img/bcs-shld.png);}

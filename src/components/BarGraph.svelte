@@ -1,13 +1,15 @@
 <script>
 	import VizHeader from '../components/VizHeader.svelte';
 	import Bar from "svelte-chartjs/src/Bar.svelte"
+
+
 	const headerOpts = {
-		title : 'Gastos reportados por estados',
-		description : 'Se indican los gastos reportados en los micrositios, por solicitud de información y comprobables por facturas.'
+		title : 'Los montos que no cuadran',
+		description : 'Se indican los gastos reportados en los micrositios y por solicitud de información'
 	};
 
 	let data = {
-		labels: ["BCN","BCS","CHI","COAH","NL","SON","TAM"],
+		labels: ["BCN*","BCS*","CHI","COAH","NL*","SON*","TAM"],
 		datasets: [
 		  {
 		    label: "Monto Publicado",
@@ -18,16 +20,21 @@
 		    label: "Monto según solicitud",
 		    data: [ 334783549.88,214813097, 234614875.09,262898439.91, 2513872893.00,680271709.32, 990000000.00],
 		    backgroundColor : '#D48B4C'
-		  },
+		  },/*
 		  {
 		    label: "Monto comprobable",
 		    data: [200414661.86, 2256852.18, 38861427.78,0,0,35326616,0 ],
 		    backgroundColor : '#F73C12'
-		  }
+		  }*/
 		]
 	};
 
 	let options = {
+		tooltips: {
+	        callbacks: {
+	            label: tooltipItem => '$' + new Intl.NumberFormat().format(tooltipItem.value/1000000) + ' MDP'
+	        }
+	    },
 		responsive: true,
 		legend : {
 			labels : {
@@ -71,11 +78,17 @@
 <VizHeader {...headerOpts} />
 <div class='container'>
 	<Bar data={data} {options} />
+	<p><strong>* BCN, BCS, NL y SON no pubicaron activamente el monto total de su gasto en sus sitios oficiales.</strong></p>
 </div>
 <style>
 	.container{
 		width: 650px;
 		margin: 0 auto;
 		height: 600px;
+	}
+	p{
+		font-size: 15px;
+		text-align: left;
+		color:#999;
 	}
 </style>

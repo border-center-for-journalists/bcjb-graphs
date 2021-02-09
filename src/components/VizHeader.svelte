@@ -19,7 +19,7 @@
 	.description{
 		text-transform: uppercase;
 		font-size:13px;
-		max-width:400px;
+		max-width:480px;
 		text-align: center;
 	}
 </style>

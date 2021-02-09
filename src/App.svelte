@@ -9,7 +9,7 @@
 
 	const header1 = {
 		title : 'Transparencia Activa de Gasto COVID',
-		description : 'Se indica que estados no cuentan con información del gasto COVID en sus sitios oficiales.'
+		description : ''
 	};
 
 
@@ -17,9 +17,9 @@
 		header: [
 			{label:''},
 			{label:'Estado'},
-			{label:'Micrositio'},
-			{label:'Commprobantes'},
-			{label:'Porcentaje Comprobado'},
+			{label:'Micrositio',tooltip:'Se indica si el estado cuenta con información del gasto relacionado al COVID en sus sitios oficiales.'},
+			{label:'Comprobantes',tooltip: 'Se indica si el estado cuenta con comprobantes fiscales en sus sitios oficiales.'},
+			{label:'Porcentaje Comprobado',tooltip: 'Se refiere a la cantidad de gastó que comprobó vía solicitudes de información.'},
 		],
 		rows: [
 			['bcn','Baja California Norte',false,false,.59],
@@ -29,7 +29,8 @@
 			['nl','Nuevo León',true,false,0],
 			['son','Sonora',true,false,.05],
 			['tam','Tamaulipas',true,false,0],
-		]
+		],
+		notes : '* <strong>Porcentaje comprobado</strong> se refiere a la cantidad de gasto que comprobó la entidad por medio de solicitudes de información.'
 	}
 
 
@@ -42,8 +43,8 @@
 		header: [
 			{label:''},
 			{label:'Estado'},
-			{label:'Fiscalización Extraordinaria'},
-			{label:'Modificaciones en el Congreso'},
+			{label:'Fiscalización Extraordinaria',tooltip: 'Indica si las auditorías estatales estan haciendo una auditoría extraordinaria del gasto. '},
+			{label:'Modificaciones en el Congreso', tooltip: 'Indica si el congreso aprobó modificaciones a la ley de ingresos y de egresos, para que los ejecutivos pudieran hacer reasignaciones de lo aprobado para 2020.'},
 		],
 		rows: [
 			['bcn','Baja California Norte',false,'N/A'],

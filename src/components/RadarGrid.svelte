@@ -2,8 +2,8 @@
 import VizHeader from '../components/VizHeader.svelte';
 import Gauge from '../components/Gauge.svelte';
 const headerOpts = {
-	title : 'Porcentage de comprobación',
-	description : 'Se indican el porcentaje de gastos comprobados mediante facturas en solicitudes de información.'
+	title : 'Poco gasto comprobado',
+	description : 'En solicitudes de información los estados respaldaron muy poco de sus gastos con comprobantes fiscales.'
 };
 
 
