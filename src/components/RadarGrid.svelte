@@ -18,6 +18,7 @@ const headerOpts = {
 	<Gauge value='5.19' title='Sonora' />
 	<Gauge value='0' title='Tamaulipas' />
 </div>
+<p>Fuente: Solicitudes de información a septiembre de 2020.</p>
 <style>
 	.gauges{
 		display: flex;

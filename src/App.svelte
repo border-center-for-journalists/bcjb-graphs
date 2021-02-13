@@ -8,7 +8,7 @@
 	const table = urlParams.table ? urlParams.table : '1';
 
 	const header1 = {
-		title : 'Transparencia Activa de Gasto COVID',
+		title : 'Transparencia activa de gasto COVID',
 		description : ''
 	};
 
@@ -19,7 +19,7 @@
 			{label:'Estado'},
 			{label:'Micrositio',tooltip:'Se indica si el estado cuenta con información del gasto relacionado al COVID en sus sitios oficiales.'},
 			{label:'Comprobantes',tooltip: 'Se indica si el estado cuenta con comprobantes fiscales en sus sitios oficiales.'},
-			{label:'Porcentaje Comprobado',tooltip: 'Se refiere a la cantidad de gastó que comprobó vía solicitudes de información.'},
+			{label:'Porcentaje Comprobado',tooltip: 'Se refiere a la cantidad de gasto que comprobó el estado vía solicitudes de información.'},
 		],
 		rows: [
 			['bcn','Baja California Norte',false,false,.59],
@@ -35,7 +35,7 @@
 
 
 	const header2 = {
-		title : 'Auditorias y modificaciones a la ley',
+		title : 'Auditorías y modificaciones a la ley',
 		description : ''
 	};
 

@@ -36,6 +36,7 @@
 		</tr>
 	{/each}
 </table>
+<p class='source'>Fuente: Solicitudes de información a septiembre de 2020.</p>
 {#if data.notes}
 <p class='notes'>{@html data.notes}</p>
 {/if}
@@ -160,6 +161,9 @@
 		max-width: 716px;
 		text-align: left;
 		font-size:14px;
+	}
+	.source{
+		text-align: right;
 	}
 	.bcn{background-image:url(/img/bcn-shld.png);}
 	.bcs{background-image:url(/img/bcs-shld.png);}

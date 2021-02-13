@@ -13,12 +13,12 @@
 		datasets: [
 		  {
 		    label: "Monto Publicado",
-		    data: [0,0,3465700000,558240163.22,0,0,990000000],
+		    data: [0,0,3465700000,558240163.22,2513872893.00,0,990000000],
 		    backgroundColor : '#FFF200'
 		  },
 		  {
 		    label: "Monto según solicitud",
-		    data: [ 334783549.88,214813097, 234614875.09,262898439.91, 2513872893.00,680271709.32, 990000000.00],
+		    data: [ 334783549.88,214813097, 234614875.09,262898439.91, 0,680271709.32, 0],
 		    backgroundColor : '#D48B4C'
 		  },/*
 		  {
@@ -78,7 +78,9 @@
 <VizHeader {...headerOpts} />
 <div class='container'>
 	<Bar data={data} {options} />
-	<p><strong>* BCN, BCS, NL y SON no pubicaron activamente el monto total de su gasto en sus sitios oficiales.</strong></p>
+	<p class='source'><strong>Fuente:</strong> Solicitudes de información a septiembre de 2020.</p>
+	<p><strong>* Baja California y Baja California Sur y Sonora no contaban con un micrositio donde proactivamente dieran a conocer montos y actualización del gasto COVID. Nuevo León y Tamaulipas no respondieron montos en las solicitudes de información.</strong></p>
+
 </div>
 <style>
 	.container{
@@ -90,5 +92,8 @@
 		font-size: 15px;
 		text-align: left;
 		color:#999;
+	}
+	p.source{
+		text-align: right;
 	}
 </style>
